@@ -1,0 +1,25 @@
+<form  #f="ngForm" (ngSubmit)="submit(f)">
+    <label for="courseName">courseName</label>
+    <div ngModelGroup="course" #course="ngModelGroup">
+     <input ngModel minlength="3" required name="courseName" id="courseName" #courseName="ngModel" (change)="log(courseName)" type="text"
+         
+      class="form-control">
+      <div *ngIf="!courseName.errors.minLength && courseName.touched" > Needs to be at least 3 characters!</div>
+
+      <label for="Category"> Category </label>
+      <select ngModel name="categories" #categories="ngModel">   
+
+        <option [ngValue]="category"  *ngFor="let category of Categories"> 
+          {{category.name}} 
+      </option>
+     
+      </select>
+
+
+      <p>{{f.value | json }} </p>
+      <div><input ngModel name="moneyBack" #moneyBack="ngModel" type="checkbox"></div>
+      
+
+        <button>Create</button>
+      </div>
+</form>

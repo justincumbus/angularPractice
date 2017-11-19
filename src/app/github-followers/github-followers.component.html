@@ -1,0 +1,13 @@
+<h1>GitHub Followers</h1>
+
+<ng-container *ngFor="let followers of followers">
+  <div class="media">
+    <img class="d-flex mr-3 github pull-left" src={{followers.avatar_url}}>
+
+
+    <div class="media-body">
+      <h5 class="mt-0 follower_name">{{followers.login}}</h5>
+      <a href={{followers.html_url}}> {{followers.html_url}}  </a>
+    </div>
+  </div>
+</ng-container>

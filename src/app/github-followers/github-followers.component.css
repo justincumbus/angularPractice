@@ -1,0 +1,12 @@
+
+.github {
+    width: 64px;
+    
+    height: 64px;
+    
+    border-radius: 100%
+}
+
+.follower_name {
+    font-weight:bold;
+}
